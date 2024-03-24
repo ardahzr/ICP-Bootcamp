@@ -1,36 +1,34 @@
+## Phone Book
 
+This project contains a simple phone book smart contract (actor) written in the Motoko programming language and running on the Internet Computer Protocol (ICP). This smart contract allows users to add and query phone entries by name.
 
-# Telefon Rehberi
+## Project Structure
 
-Bu proje, Motoko programlama dilini kullanarak Internet Computer Protocol (ICP) üzerinde çalışan basit bir telefon rehberi akıllı sözleşmesi (aktör) içerir. Bu akıllı sözleşme kullanıcıların isimlerine göre telefon girişlerini eklemelerine ve sorgulamalarına izin verir.
+The project utilizes Motoko's type system and the HashMap module to create a basic phone book. It provides a structure where entries containing phone numbers and associated descriptions can be added and queried.
 
-## Proje Yapısı
+## Modules and Functions Used
 
-Proje, temel bir telefon rehberi oluşturmak için Motoko'nun tip sistemini ve HashMap modülünü kullanır. Telefon numaraları ve ilgili açıklamaları içeren girişlerin eklenip sorgulanabileceği bir yapı sunar.
+- **HashMap Module:** Used to create a mutable collection that maps names to phone entries.
+- **Text Module:** Used to handle data of type text. Names, descriptions, and phone numbers are stored and processed as text.
 
-## Kullanılan Modüller ve Fonksiyonlar
+## Defined Data Types
 
-- **HashMap Modülü:** İsimleri telefon girişlerine eşleyen değiştirilebilir bir koleksiyon oluşturmak için kullanılır.
-- **Text Modülü:** Metin türünde verileri işlemek için kullanılır. İsimler, açıklamalar ve telefon numaraları metin olarak saklanır ve işlenir.
+- **Name:** An alias for the Text type, representing names associated with phone entries.
+- **Phone:** An alias for the Text type, used to store phone numbers as text.
+- **Entry:** A record containing a description (desc) and a phone number (phone) for each entry.
 
-## Tanımlanan Veri Tipleri
+## Smart Contract Functions
 
-- **Name:** Metin türünde bir takma ad olan Name, telefon girişleriyle ilişkilendirilen isimleri temsil eder.
-- **Phone:** Telefon numaralarını metin olarak saklamak için kullanılan Text tipi için bir takma ad olan Phone.
-- **Entry:** Her bir giriş için bir açıklama (desc) ve bir telefon numarası (phone) içeren bir kayıttır.
+- **insert(name, entry):** This function allows users to add a new entry to the phone book. It takes the name and entry information as parameters and works asynchronously.
+- **lookup(name):** This function queries the phone book for an entry using the name parameter. It returns a value of type ?Entry if the entry is found.
 
-## Akıllı Sözleşme İşlevleri
+## How to Use
 
-- **insert(name, entry):** Bu işlev, kullanıcıların telefon rehberine yeni bir giriş eklemesini sağlar. İsim ve giriş bilgileri parametre olarak alınır ve asenkron olarak çalışır.
-- **lookup(name):** İsim parametresini kullanarak telefon rehberindeki bir girişi sorgulayan işlevdir. Eğer giriş bulunursa ?Entry tipinde bir değer döndürür.
+1. Import the necessary modules to start the smart contract.
+2. Create a HashMap for the phone book.
+3. Add new entries using the insert function if desired.
+4. Query the phone book for entries using the lookup function.
 
-## Nasıl Kullanılır?
+This project is a good starting point for understanding the basics of the Motoko language and developing smart contracts.
 
-1. Akıllı sözleşmeyi başlatmak için gerekli olan modülleri içe aktarın.
-2. Telefon rehberi için bir HashMap oluşturun.
-3. İstenirse insert işlevini kullanarak yeni girişler ekleyin.
-4. lookup işlevini kullanarak telefon rehberindeki girişleri sorgulayın.
-
-Bu proje, Motoko dilinin temellerini anlamak ve akıllı sözleşme geliştirmek için iyi bir başlangıç noktasıdır.
-
-Daha fazla bilgi için [Motoko Dökümantasyonu](https://internetcomputer.org/docs/current/motoko/main/motoko)'nu inceleyebilirsiniz.
+For more information, please refer to the [Motoko Documentation](https://internetcomputer.org/docs/current/motoko/main/motoko).
