@@ -1,4 +1,4 @@
-# token_transfer
+# Token Transfer
 
 Welcome to your new token_transfer project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
