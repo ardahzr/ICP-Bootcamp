@@ -1,35 +1,43 @@
-## Superheroes Projesi
-Bu proje, süper kahramanların oluşturulması, okunması, güncellenmesi ve silinmesi gibi temel işlemleri gerçekleştirmek için bir API sağlar. Veri depolama ve işleme için Trie veri yapısını kullanır.
+## Superheroes Project
 
-## Proje, aşağıdaki temel işlevleri sağlayan bir API sunar:
+This project provides an API for performing basic operations on superheroes, such as creating, reading, updating, and deleting them. It utilizes the Trie data structure for data storage and processing.
 
-- create(superhero: Superhero): Yeni bir süper kahraman oluşturur ve bir süper kahraman kimliği döndürür.
-- read(superheroId: SuperheroId): Belirli bir süper kahramanın bilgilerini okur.
-- update(superheroId: SuperheroId, superhero: Superhero): Varolan bir süper kahramanın bilgilerini günceller.
-- delete(superheroId: SuperheroId): Bir süper kahramanı siler.
+## The project offers an API with the following core functionalities:
 
-  ## API'nin kullanımıyla ilgili örnekler:
+- **create(superhero: Superhero):** Creates a new superhero and returns a superhero ID.
+- **read(superheroId: SuperheroId):** Reads the information of a specific superhero.
+- **update(superheroId: SuperheroId, superhero: Superhero):** Updates the information of an existing superhero.
+- **delete(superheroId: SuperheroId):** Deletes a superhero.
 
-- Yeni bir süper kahraman oluşturmak
-```
+## Examples of using the API:
+
+- **Creating a new superhero:**
+
+```javascript
 let NewSuperheroId = Superheroes.create({
   name: "Spider-Man",
   superpowers: ["Agility", "Web-slinging", "Spidey sense"]
-}).
+});
 ```
-- Bir süper kahramanın bilgilerini okumak
+
+- **Reading a superhero's information:**
+
+```javascript
+let SuperheroInfo = Superheroes.read(NewSuperheroId);
 ```
-let SuperheroInfo = Superheroes.read(NewSuperheroId).
-```
-- Bir süper kahramanın bilgilerini güncellemek
-```
+
+- **Updating a superhero's information:**
+
+```javascript
 let UpdatedSuperhero = {
   name: "Spider-Man",
   superpowers: ["Agility", "Web-slinging", "Spidey sense", "Super strength"]
-}.
-let IsUpdated = Superheroes.update(NewSuperheroId, UpdatedSuperhero).
+};
+let IsUpdated = Superheroes.update(NewSuperheroId, UpdatedSuperhero);
 ```
-- Bir süper kahramanı silmek
-```
-let IsDeleted = Superheroes.delete(NewSuperheroId).
+
+- **Deleting a superhero:**
+
+```javascript
+let IsDeleted = Superheroes.delete(NewSuperheroId);
 ```
