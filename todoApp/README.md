@@ -1,37 +1,37 @@
-# Motoko todoApp
+## Motoko todoApp
 
-## Tanıtım
+## Introduction
 
-Bu proje, Internet Computer Protocol (ICP) üzerinde Motoko programlama dilini kullanarak oluşturulmuş basit bir yapılacaklar listesi akıllı sözleşmesidir (aktör). Bu sözleşme kullanıcıların yapılacakları isimlerine göre eklemeler yapmalarını, tamamlamalarını ve listeden silmelerini sağlar.
+This project is a simple to-do list smart contract (actor) built using the Motoko programming language on the Internet Computer Protocol (ICP). This contract allows users to add, complete, and remove tasks based on their names.
 
-## Proje Yapısı
+## Project Structure
 
-Proje, Motoko'nun tip sistemini ve HashMap, Hash, Nat, Iter ve Text modüllerini kullanarak işlevsel bir yapılacaklar listesi uygulaması oluşturur.
+The project utilizes Motoko's type system and modules like HashMap, Hash, Nat, Iter, and Text to create a functional to-do list application.
 
-## Kullanılan Modüller ve Fonksiyonlar
+## Modules and Functions Used
 
-- **HashMap Modülü:** Görev isimlerini karşılık gelen bilgileriyle eşleyen değiştirilebilir bir koleksiyon oluşturmak için kullanılır.
-- **Hash Modülü:** Metin verilerini hashlemek için kullanılır.
-- **Nat Modülü:** Doğal sayılarla çalışmak için kullanılır.
-- **Iter Modülü:** Döngü ve iterasyon işlemleri için kullanılır.
-- **Text Modülü:** Metin verileriyle çalışmak için kullanılır.
+- **HashMap Module:** Used to create a mutable collection that maps task names to their corresponding information.
+- **Hash Module:** Used to hash text data.
+- **Nat Module:** Used to work with natural numbers.
+- **Iter Module:** Used for looping and iteration operations.
+- **Text Module:** Used to work with text data.
 
-## Tanımlanan Veri Tipleri
+## Data Types Defined
 
-- **ToDo:** Bir yapılacak görevi için tanımlanan bir kayıt tipidir. Bu kayıt, bir açıklama ve tamamlanma durumu alanlarına sahiptir.
+- **ToDo:** A record type defined for a single to-do task. This record contains fields for a description and completion status.
 
-## Akıllı Sözleşme İşlevleri
+## Smart Contract Functions
 
-- **getTodos():** Tüm yapılacak görevlerin listesini almak için kullanılır.
-- **addTodo(description):** Yeni bir yapılacak görev eklemek için kullanılır.
-- **completeTodo(id):** Belirli bir yapılacak görevi tamamlanmış olarak işaretlemek için kullanılır.
-- **showTodos():** Tüm yapılacak görevleri göstermek için kullanılır.
-- **clearCompleted():** Tamamlanmış olan tüm görevleri temizlemek için kullanılır.
+- **getTodos():** Used to retrieve a list of all to-do tasks.
+- **addTodo(description):** Used to add a new to-do task.
+- **completeTodo(id):** Used to mark a specific to-do task as completed.
+- **showTodos():** Used to display all to-do tasks.
+- **clearCompleted():** Used to clear all completed tasks.
 
-## Nasıl Kullanılır?
+## How to Use?
 
-1. Akıllı sözleşmeyi başlatmak için gerekli olan modülleri içe aktarın.
-2. Yapılacaklar listesi için bir HashMap oluşturun.
-3. İstenirse yapılacak görevleri ekleyin, işaretleyin veya temizleyin.
+1. Import the necessary modules to start the smart contract.
+2. Create a HashMap for the to-do list.
+3. Add, mark, or clear to-do tasks as desired.
 
-Bu proje, Motoko dilini kullanarak akıllı sözleşmeler oluşturmayı ve kullanmayı öğrenmek için harika bir örnek olabilir. Daha fazla bilgi için [Motoko Dökümantasyonu](https://internetcomputer.org/docs/current/motoko/main/motoko)'na göz atabilirsiniz.
+This project can be a great example for learning how to build and use smart contracts with the Motoko language. For more information, you can refer to the [Motoko Documentation](https://internetcomputer.org/docs/current/motoko/main/motoko).
